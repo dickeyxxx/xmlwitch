@@ -42,6 +42,7 @@ Links
 """
 
 from distutils.core import setup
+from tests import TestCommand
 
 setup(
     name = 'xmlwitch',
@@ -54,6 +55,9 @@ setup(
     long_description = __doc__,
     py_modules = ['xmlwitch'],
     platforms = 'Python 2.5 and later',
+    cmdclass = {
+        'test': TestCommand,
+    },
     classifiers = [
         'Intended Audience :: Developers',
         'Development Status :: 5 - Production/Stable',
