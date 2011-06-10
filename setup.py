@@ -1,3 +1,4 @@
+#!/usr/bin/python
 """
 xmlwitch offers Pythonic XML generation through context generators in a 
 minimalist implementation with less than 100 lines of code. BSD-licensed.
