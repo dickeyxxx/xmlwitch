@@ -87,7 +87,7 @@ class Element:
                     self.name, self._serialized_attrs()
                 ))
             else:
-                value = saxutils.escape(value)
+                value = saxutils.escape(unicode(value))
                 self.builder.write_indented('<%s%s>%s</%s>' % (
                     self.name, self._serialized_attrs(), value, self.name
                 ))
@@ -98,7 +98,7 @@ class Element:
         serialized = []
         for attr, value in self.attributes.items():
             serialized.append(' %s=%s' % (
-                self._nameprep(attr), saxutils.quoteattr(value)
+                self._nameprep(attr), saxutils.quoteattr(unicode(value))
             ))
         return ''.join(serialized)
 
