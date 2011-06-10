@@ -8,7 +8,8 @@ __license__ = 'BSD'
 __version__ = '0.2.1'
 __author__ = "Jonas Galvez <http://jonasgalvez.com.br/>"
 __contributors__ = ["bbolli <http://github.com/bbolli/>",
-                    "masklinn <http://github.com/masklinn/>"]
+                    "masklinn <http://github.com/masklinn/>",
+                    "dickeytk <http://github.com/dickeytk/>"]
 
 class Builder:
     
