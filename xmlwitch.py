@@ -13,7 +13,7 @@ __contributors__ = ["bbolli <http://github.com/bbolli/>",
 
 class Builder:
     
-    def __init__(self, encoding='utf-8', indent=' '*2, version=None):
+    def __init__(self, encoding='utf-8', indent=True, version=None):
         self._document = StringIO()
         self._encoding = encoding
         self._indent = indent
@@ -47,7 +47,10 @@ class Builder:
         
     def write_indented(self, content):
         """Write indented content to the document"""
-        self.write('%s%s\n' % (self._indent * self._indentation, content))
+        if self._indent:
+            self.write('%s%s\n' % ("  " * self._indentation, content))
+        else:
+            self.write(content)
 
 builder = Builder # 0.1 backward compatibility
 
